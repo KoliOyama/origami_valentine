@@ -19,7 +19,7 @@ const NoScreen = () => {
   };
 
   return (
-    <PageContainer className="justify-between py-16">
+    <PageContainer className="items-center justify-center">
       {/* Spacer for top */}
       <div className="flex-1" />
 
@@ -55,7 +55,7 @@ const NoScreen = () => {
 
       {/* Try again button - bottom */}
       <motion.div
-        className="flex-1 flex flex-col items-center justify-end pt-16"
+        className="flex-1 flex flex-col items-center justify-end pb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.6 }}
