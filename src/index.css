@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luxurious+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Maragsa';
+    src: url('./assets/fonts/Maragsa-Display.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer base {
+    html {
+        font-family: 'Inter', sans-serif;
+    }
+
+    body {
+        @apply bg-valentine-bg min-h-screen;
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Focus visible styles for accessibility */
+    :focus-visible {
+        outline: 2px solid #7F3A27;
+        outline-offset: 2px;
+    }
+
+    /* Remove default focus for mouse users */
+    :focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+@layer utilities {
+
+    /* Screen reader only - visually hidden but accessible */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
